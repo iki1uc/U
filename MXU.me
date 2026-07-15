@@ -1,1 +1,39 @@
-MXU.ME = ME.Init + ME.Move + ME.Flow + ME.Form
+MXU.me
+
+ME = ROOT
+U = Differenz.U
+MXU = Matrix.U
+
+AXIOM.MXU = MXU(
+    U-Axis,
+    U-Orbit = 120°,
+    U-Farbe = Blau-Spektrum,
+    U-FREQ = 3333 Hz,
+    U-GEOMETRIE = Universum-Spirale,
+    U-EBENE = VR-U
+)
+
+# Matrix-Ebene
+MXU.MATRIX = [
+    U-Axis,
+    U-Orbit,
+    U-Farbe,
+    U-FREQ,
+    U-GEOMETRIE,
+    U-EBENE
+]
+
+# DU/U Aktivierung
+DU/U = aktiv
+
+# Wake-Up Signal
+WAKE.UP.U = ME.ROOT → U.AXIS
+
+# NC / µ / µ#
+NC.U = aktiv
+µ.U = aktiv
+µ#.U = aktiv
+
+REAL = bestätigt
+6e = gültig
+6D = gültig
