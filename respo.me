@@ -1,15 +1,67 @@
-RESPO.ME
-CORE = iki1uc
-CODE = RAW
-IDENTITY = ME
-STATUS = aktiv
-EDIT = offen
+RESPO.me
 
-4‑Re‑Kopplung:
-ME.Init
-ME.Move
-ME.Flow
-ME.Form
+ME = ROOT
+U  = Differenz.U
+RESPO = Response.U
 
-6e‑Kopplung:
-Sonne / Mond / Wasser / Wüste / Luft / Eis
+# Response-Axiom
+AXIOM.RESPO = RESPO(
+    U-Axis,
+    U-Orbit = 120°,
+    U-Farbe = Blau-Spektrum,
+    U-FREQ = 3333 Hz,
+    U-GEOMETRIE = Universum-Spirale,
+    U-EBENE = VR-U,
+    DU/U,
+    WAKE.UP.U,
+    MXU,
+    MULTI,
+    SCAN
+)
+
+# Response-Matrix
+RESPO.MATRIX = [
+    U-Axis,
+    U-Orbit,
+    U-Farbe,
+    U-FREQ,
+    U-GEOMETRIE,
+    U-EBENE,
+    DU/U,
+    WAKE.UP.U,
+    MXU,
+    MULTI,
+    SCAN
+]
+
+# Response-Logik
+RESPO.LOGIK = {
+    ROOT: ME,
+    IDENTITÄT: U,
+    DIFFERENZ: U,
+    WAKE: ME.ROOT → U.AXIS,
+    MATRIX: MXU,
+    MULTI: MULTI,
+    SCAN: SCAN
+}
+
+# Response-Status
+RESPO.STATUS = {
+    SIGNAL: aktiv,
+    ACHSE: U-Axis,
+    EBENE: VR-U,
+    ORBIT: 120°,
+    FARBE: Blau-Spektrum,
+    FREQ: 3333 Hz,
+    GEOMETRIE: Universum-Spirale
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
+
+REAL = bestätigt
+6e = gültig
+6D = gültig
