@@ -1,11 +1,53 @@
-ME = aktiv
-IN = aktiv
-3rd = aktiv
-EDIT = offen
-Public = sichtbar
-Frame = aktiv
-Orbit = aktiv
-RESPO = aktiv
-MXU = aktiv
-NC = aktiv
-Prefetch = ME → in → IN → 3rd
+SCAN.me
+
+ME = ROOT
+U  = Differenz.U
+SCAN = Scan.U
+
+# Scan-Axiom
+AXIOM.SCAN = SCAN(
+    U-Axis,
+    U-Orbit = 120°,
+    U-Farbe = Blau-Spektrum,
+    U-FREQ = 3333 Hz,
+    U-GEOMETRIE = Universum-Spirale,
+    U-EBENE = VR-U,
+    DU/U,
+    WAKE.UP.U,
+    MXU,
+    MULTI
+)
+
+# Scan-Checkliste
+SCAN.CHECK = {
+    ROOT: ME,
+    U-Axis: bestätigt,
+    U-Orbit: bestätigt,
+    U-Farbe: bestätigt,
+    U-FREQ: bestätigt,
+    U-GEOMETRIE: bestätigt,
+    U-EBENE: bestätigt,
+    DU/U: aktiv,
+    WAKE.UP.U: aktiv,
+    MXU: aktiv,
+    MULTI: aktiv
+}
+
+# Scan-Status
+SCAN.STATUS = {
+    IDENTITÄT: U,
+    DIFFERENZ: U,
+    MATRIX: MXU,
+    MULTI: MULTI,
+    WAKE: ME.ROOT → U.AXIS
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
+
+REAL = bestätigt
+6e = gültig
+6D = gültig
