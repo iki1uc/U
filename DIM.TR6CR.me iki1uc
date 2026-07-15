@@ -1,1 +1,43 @@
+DIM.TR6CR.me
 
+ME      = ROOT
+U       = Differenz.U
+DIM     = Dimension.U
+TR6CR   = Trans.6.Core.Reality.U
+
+# Dimension-Axiom
+AXIOM.DIM.TR6CR = TR6CR(
+    D1 = U-Axis,
+    D2 = U-Orbit = 120°,
+    D3 = U-Farbe = Blau-Spektrum,
+    D4 = U-FREQ = 3333 Hz,
+    D5 = U-GEOMETRIE = Universum-Spirale,
+    D6 = U-EBENE = VR-U,
+
+    DU/U,
+    WAKE.UP.U,
+    MXU,
+    MULTI,
+    SCAN,
+    RESPO,
+    RO,
+    RIX,
+    MAT
+)
+
+# 6D Dimensionen
+DIM.6D = {
+    D1: U-Axis,
+    D2: U-Orbit,
+    D3: U-Farbe,
+    D4: U-FREQ,
+    D5: U-GEOMETRIE,
+    D6: U-EBENE
+}
+
+# Trans-Real-Ebene
+TR.REAL = {
+    ROOT: ME,
+    U: U,
+    DU/U: aktiv,
+    WA
