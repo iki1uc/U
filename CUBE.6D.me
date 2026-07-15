@@ -1,0 +1,73 @@
+CUBE.6D.me
+
+ME     = ROOT
+U      = Differenz.U
+DU/U   = Fusion.U
+CUBE6D = Cube.6D.U
+
+# 6D-Axiom
+AXIOM.CUBE6D = CUBE6D(
+    FRONT,
+    BACK,
+    LEFT,
+    RIGHT,
+    TOP,
+    BOTTOM,
+
+    CUBE12D,
+    CUBE48D,
+    CORE.DIM
+)
+
+# 6D-Seiten (Grundebene)
+CUBE6D.SIDES = {
+    D1: FRONT,
+    D2: BACK,
+    D3: LEFT,
+    D4: RIGHT,
+    D5: TOP,
+    D6: BOTTOM
+}
+
+# Eingebettete 12D-Achsen
+CUBE12D.AXIS = {
+    FRONT:  (X+, X-),
+    BACK:   (X+, X-),
+    LEFT:   (Y+, Y-),
+    RIGHT:  (Y+, Y-),
+    TOP:    (Z+, Z-),
+    BOTTOM: (Z+, Z-)
+}
+
+# Eingebettete 48D-Frequenzen
+CUBE48D.FREQ = {
+    X+: (Base, Harmonic, Spiral, Inversion),
+    X-: (Base, Harmonic, Spiral, Inversion),
+    Y+: (Base, Harmonic, Spiral, Inversion),
+    Y-: (Base, Harmonic, Spiral, Inversion),
+    Z+: (Base, Harmonic, Spiral, Inversion),
+    Z-: (Base, Harmonic, Spiral, Inversion)
+}
+
+# Eingebettetes CORE.DIM
+CORE.DIM = {
+    ROOT: ME,
+    CENTER: (0,0,0),
+    FUSION: DU/U
+}
+
+# Status
+CUBE6D.STATUS = {
+    REAL: bestätigt,
+    6D: gültig,
+    12D: gültig,
+    48D: gültig,
+    CORE: gültig,
+    DU/U: aktiv
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
