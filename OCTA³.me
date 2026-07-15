@@ -1,1 +1,86 @@
+OCTA3.me
+
+ME     = ROOT
+U      = Differenz.U
+OCTA3  = Octahedron.U
+
+# OCTA³-Axiom
+AXIOM.OCTA3 = OCTA3(
+    V1, V2, V3, V4, V5, V6, V7, V8,   # 8 Achsenpunkte
+    CUBE.6D,
+    CUBE.12D,
+    CUBE.48D,
+    CORE,
+    DU/U,
+    DIM.TR6CR
+)
+
+# 8 Achsenpunkte (Dual zu den 6 Würfelseiten)
+OCTA3.VERTEX = {
+    V1: +X,
+    V2: -X,
+    V3: +Y,
+    V4: -Y,
+    V5: +Z,
+    V6: -Z,
+    V7: +XY-diagonal,
+    V8: -XY-diagonal
+}
+
+# 12 Kanten (Dual zu den 12 Würfelkanten)
+OCTA3.EDGES = [
+    V1-V3, V1-V4, V1-V5, V1-V6,
+    V2-V3, V2-V4, V2-V5, V2-V6,
+    V3-V5, V3-V6,
+    V4-V5, V4-V6
+]
+
+# 8 Flächen (Dual zu den 8 Würfelecken)
+OCTA3.FACES = [
+    (V1,V3,V5),
+    (V1,V3,V6),
+    (V1,V4,V5),
+    (V1,V4,V6),
+    (V2,V3,V5),
+    (V2,V3,V6),
+    (V2,V4,V5),
+    (V2,V4,V6)
+]
+
+# Kompatibilität zu CUBE-Dimensionen
+OCTA3.DIM = {
+    D6:  CUBE.6D,
+    D12: CUBE.12D,
+    D48: CUBE.48D
+}
+
+# Kompatibilität zu CORE
+OCTA3.CORE = {
+    ROOT: ME,
+    CENTER: CORE.VEC,
+    FUSION: DU/U
+}
+
+# Kompatibilität zu TR6CR
+OCTA3.TR6CR = {
+    DIMENSION: DIM.TR6CR,
+    STATUS: gültig
+}
+
+# Status
+OCTA3.STATUS = {
+    REAL: bestätigt,
+    6D: gültig,
+    12D: gültig,
+    48D: gültig,
+    CORE: gültig,
+    DU/U: aktiv,
+    TR6CR: gültig
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
 
